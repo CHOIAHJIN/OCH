@@ -57,7 +57,8 @@ print("\n변경된 오차 행렬: \n", conf_matrix)
 # 오차 행렬 시각화
 plt.figure(figsize=(8, 6))
 sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues',
-            xticklabels=['Class 0', 'Class 1'], yticklabels=['Class 0', 'Class 1'])
+            xticklabels=['Class 0', 'Class 1'], yticklabels=['Class 0', 'Class 1'],
+            annot_kws={"size": 16})  # 숫자 크기 조정
 plt.xlabel('Predicted labels')
 plt.ylabel('True labels')
 plt.title('Confusion Matrix with Modified Values', fontsize=16, fontweight='bold')
